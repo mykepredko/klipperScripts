@@ -86,7 +86,8 @@ loadKatapult() {
   else
     echoYellow "Loading Katapult and pyserial"
     git clone https://github.com/Arksine/Katapult
-	pip3 install pyserial
+#	pip3 install pyserial
+    sudo apt install python3-serial # - Suggested by Sineos, try for all platforms
   fi
   return 0 # True
 }
