@@ -152,7 +152,11 @@ exitIfMainControllerUSBNotCorrect "0483:df11"
 # sudo apt upgrade -y
 
 
-# Build the firmware images
+echoYellow "Update klipper"
+cd ~/klipper
+git pull
+sudo service klipper restart
+
 echoYellow "Build Katapult firmware image"
 cd ~/Katapult
 make clean
