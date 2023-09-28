@@ -32,6 +32,8 @@ echoYellow(){
 
 echoYellow "Flash ~/klipper/out/klipper.bin into Controller"
 
+sudo service klipper stop
+
 echoYellow "~/Katapult/scripts/flash_can.py -i can0 -q"
 can0UUIDs=`~/Katapult/scripts/flash_can.py -i can0 -q`
 if [[ "$can0UUIDs" == *", Application: Klipper"* ]]; then
@@ -61,3 +63,5 @@ sleep 1s
 
 echoYellow "~/Katapult/scripts/flash_can.py -i can0 -q"
 ~/Katapult/scripts/flash_can.py -i can0 -q
+
+sudo service klipper start
