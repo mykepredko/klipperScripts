@@ -41,7 +41,7 @@ if [[ "$can0UUIDs" == *", Application: Klipper"* ]]; then
   klipperUUID=${klipperLeadUUID#*"UUID: "}
 else
   echoRed "Error - 'flash_can.py -i can0 -q' does not return ', Application: Klipper'"
-  sudo service klipper start
+  sudo service klipper restart
   exit 1
 fi
 
@@ -54,7 +54,7 @@ echoYellow "ls /dev/serial/by-id/"
 klipperSerialID=`ls /dev/serial/by-id/`
 if [[ "$klipperSerialID" == *"No such file or directory"* ]]; then
   echoRed "Error - 'ls /dev/serial/by-id/' returns 'No such file or directory'"
-  sudo service klipper start
+  sudo service klipper restart
   exit 1
 fi
 
@@ -66,4 +66,4 @@ sleep 1s
 echoYellow "~/Katapult/scripts/flash_can.py -i can0 -q"
 ~/Katapult/scripts/flash_can.py -i can0 -q
 
-sudo service klipper start
+sudo service klipper restart
