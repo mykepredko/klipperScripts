@@ -68,7 +68,7 @@ do
 
     mcuCfgContents=`cat /home/$userName/printer_data/config/mcu.cfg`
     if [[ "$mcuCfgContents" == *"@@@"* ]]; then  # Have to set the canbus UUID
-	
+
       can0UUIDs=`/home/$userName/Katapult/scripts/flash_can.py -i can0 -q`
 #      echo "Time: $(date)" > /home/$userName/mcuUpdateData3
 #      echo "$can0UUIDs" >> /home/$userName/mcuUpdateData3
@@ -78,7 +78,8 @@ do
       else 
         exit 1  # Can't get the canbus UUID
       fi
-	
+
+      sudo rm /home/$userName/printer_data/config/mcu.cfg
       mcuCfgContents=${mcuCfgContents//$'@@@'/$klipperUUID}
       mcuCfgContents=${mcuCfgContents//$'\n'/\\n}
 #      echo "Time: $(date)" > /home/$userName/mcuUpdateData4
@@ -88,7 +89,7 @@ do
       sudo cp $mcuCfgTemp /home/$userName/printer_data/config/mcu.cfg
       exit 0 # All Done!
     fi
-	
+
   fi
   
 done
