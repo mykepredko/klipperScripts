@@ -4,7 +4,7 @@ After=network.target
 Requires=moonraker.service
 
 [Service]
-ExecStart=/home/biqu/mcuUpdate1.sh
+ExecStart=/home/biqu/mcuUpdate2.sh
 Restart=always
 User=root
 Group=root
