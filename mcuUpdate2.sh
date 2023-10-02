@@ -21,7 +21,7 @@
 # - If all checks are satisified, the UUID replaces "@@@" in mnu.cfg and the program exists
 
 # To Run on Reboot
-# - "sudo nano /etc/systemd/system/mcuUpdate1.service" and put in the following data:
+# - "sudo nano /etc/systemd/system/mcuUpdate2.service" and put in the following data:
 #[Unit]
 #Description=Update the mcu.cfg file with the CAN0 UUID
 #After=network.target
