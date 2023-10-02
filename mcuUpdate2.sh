@@ -87,6 +87,7 @@ do
       mcuCfgTemp=$(mktemp)
       echo -e $mcuCfgContents > $mcuCfgTemp
       sudo cp $mcuCfgTemp /home/$userName/printer_data/config/mcu.cfg
+      sudo chmod +r /home/$userName/printer_data/config/mcu.cfg
       exit 0 # All Done!
     fi
 
