@@ -258,13 +258,14 @@ mcuCfgContents=${mcuCfgContents//$'&&&'/$homeDirectory}
 mcuCfgContents=${mcuCfgContents//$'\n'/\\\\n}  # <=== What happens if the new lines aren't modified?
 mcuCfgTemp=$(mktemp)
 echo -e $mcuCfgContents > $mcuCfgTemp
-#sudo cp $mcuCfgTemp $homeDirectory/printer_data/config/mcu.cfg
-#sudo chmod +r $homeDirectory/printer_data/config/mcu.cfg
+sudo cp $mcuCfgTemp $homeDirectory/printer_data/config/mcu.cfg
+sudo chmod +r $homeDirectory/printer_data/config/mcu.cfg
 
-# Put in second copy to see if problem is with Klipper/Mainsail changing the file
-sudo cp $mcuCfgTemp $homeDirectory/mcu.cfg
-sudo chmod +r $homeDirectory/mcu.cfg
-sudo cp $homeDirectory/mcu.cfg $homeDirectory/printer_data/config/mcu.cfg
+### Removed - should not be necessary
+## Put in second copy to see if problem is with Klipper/Mainsail changing the file
+#sudo cp $mcuCfgTemp $homeDirectory/mcu.cfg
+#sudo chmod +r $homeDirectory/mcu.cfg
+#sudo cp $homeDirectory/mcu.cfg $homeDirectory/printer_data/config/mcu.cfg
 
 
 echoYellow "Add mcuUpdate.sh in the home directory"
