@@ -88,6 +88,16 @@ do
       echo -e $mcuCfgContents > $mcuCfgTemp
       sudo cp $mcuCfgTemp /home/$userName/printer_data/config/mcu.cfg
       sudo chmod +r /home/$userName/printer_data/config/mcu.cfg
+
+### Code Below is to show that mcuUpdate2.sh has run
+### Suspect that it runs after writeKlipper5.sh
+      runFile="mcuUpdate2 has executed!"
+      runFileTemp=$(mktemp)
+      echo -e $runFile > $runFileTemp
+      sudo cp $runFileTemp /home/$userName/runFile.txt
+      sudo chmod +r /home/$userName/runFile.txt
+
+      
       exit 0 # All Done!
     fi
 
