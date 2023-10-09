@@ -276,9 +276,9 @@ if [[ "$can0UUIDs" == *", Application: Klipper"* ]]; then  # Have the canbus UUI
   mcuCfgReadTemp=$(mktemp)
   echo -e $mcuCfgRead > $mcuCfgReadTemp
   sudo cp -f $mcuCfgReadTemp $homeDirectory/printer_data/config/mcu.cfg
-#  chmod +r $homeDirectory/printer_data/config/mcu.cfg
+  sudo chmod +r $homeDirectory/printer_data/config/mcu.cfg
 
-#  sudo service klipper restart
+  sudo service klipper restart
 
   echoGreen "
 #######################################################
