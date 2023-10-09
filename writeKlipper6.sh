@@ -200,7 +200,6 @@ cd ~/klipper
 git pull
 cd ~/moonraker
 git pull
-#sudo service klipper restart
 loadKatapult
 loadKIAUH
 exitIfMainControllerUSBNotCorrect "0483:df11"
@@ -262,6 +261,7 @@ sudo cp $mcuCfgTemp $homeDirectory/printer_data/config/mcu.cfg
 sudo chmod +r $homeDirectory/printer_data/config/mcu.cfg
 
 
+sleep 5s  # Give system some time to restart and have CAN bus set up
 can0UUIDs=`$homeDirectory/Katapult/scripts/flash_can.py -i can0 -q`
 if [[ "$can0UUIDs" == *", Application: Klipper"* ]]; then  # Have the canbus UUID/Update mcu.cfg
   echoYellow "Can update mcu.cfg"
@@ -277,6 +277,15 @@ if [[ "$can0UUIDs" == *", Application: Klipper"* ]]; then  # Have the canbus UUI
   echo -e $mcuCfgRead > $mcuCfgReadTemp
   sudo cp $mcuCfgReadTemp $homeDirectory/printer_data/config/mcu.cfg
   chmod +r $homeDirectory/printer_data/config/mcu.cfg
+
+  sudo service klipper restart
+
+  echoGreen "
+#######################################################
+###                                                 ###
+###  System Ready for Toolhead Connection/Flashing  ###
+###                                                 ###
+#######################################################"
 else # Don't have canbus UUID/Setup for later update of mcu.cfg
   echoYellow "Add mcuUpdate.sh in the home directory"
   
@@ -300,42 +309,31 @@ else # Don't have canbus UUID/Setup for later update of mcu.cfg
   sudo systemctl daemon-reload
   sudo systemctl enable mcuUpdate2.service
   sudo systemctl start mcuUpdate2.service
-fi
-
 
 # + Add 10s Countdown to the sudo reboot so user can halt it
-echoYellow "
+  echoYellow "
 ###################################
 ###                             ###
 ###  sudo reboot in 10 seconds  ###
 ###                             ###
 ###################################"
-
-sleep 1s
-echoYellow "9 Seconds"
-
-sleep 1s
-echoYellow "8 Seconds"
-
-sleep 1s
-echoYellow "7 Seconds"
-
-sleep 1s
-echoYellow "6 Seconds"
-
-sleep 1s
-echoYellow "5 Seconds"
-
-sleep 1s
-echoYellow "4 Seconds"
-
-sleep 1s
-echoYellow "3 Seconds"
-
-sleep 1s
-echoYellow "2 Seconds"
-
-sleep 1s
-echoYellow "1 Second"
-
-echo "sudo reboot"  # Remove "echo" when ready to ship the code
+  sleep 1s
+  echoYellow "9 Seconds"
+  sleep 1s
+  echoYellow "8 Seconds"
+  sleep 1s
+  echoYellow "7 Seconds"
+  sleep 1s
+  echoYellow "6 Seconds"
+  sleep 1s
+  echoYellow "5 Seconds"
+  sleep 1s
+  echoYellow "4 Seconds"
+  sleep 1s
+  echoYellow "3 Seconds"
+  sleep 1s
+  echoYellow "2 Seconds"
+  sleep 1s
+  echoYellow "1 Second"
+  echo "sudo reboot"  # Remove "echo" when ready to ship the code
+fi
