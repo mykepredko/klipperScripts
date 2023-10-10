@@ -1,5 +1,12 @@
 [mcu toolhead]
-# board="EBB42 V1.2"
+#
+# NOTE: This is a System Generated File
+#
+# DO NOT attempt to edit this file as
+# unexpected printer behaviour may 
+# result 
+#
+# board=mantaM8PG0B# board="EBB42 V1.2"
 # canbus_speed=%%%
 canbus_uuid: @@@
 #restart_method: command
