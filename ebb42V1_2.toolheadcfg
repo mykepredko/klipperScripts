@@ -6,19 +6,20 @@
 # unexpected printer behaviour may 
 # result 
 #
-# board=mantaM8PG0B# board="EBB42 V1.2"
+# board=mantaM8PG0B
+# board="EBB42 V1.2"
 # canbus_speed=%%%
 canbus_uuid: @@@
-#restart_method: command
+# home_directory=&&&
 
-[temperature_sensor mcu_temp]
+[temperature_sensor toolhead_temp]
 sensor_type: temperature_mcu
-
 [temperature_sensor toolhead_temp]
 sensor_type: temperature_mcu
 sensor_mcu: toolhead
 min_temp: 0
 max_temp: 100
+
 
 [board_pins]
 aliases:
