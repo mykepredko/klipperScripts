@@ -4,7 +4,7 @@ After=network.target
 Requires=moonraker.service
 
 [Service]
-ExecStart=/home/&&&/headerUpdate1.sh
+ExecStart=&&&/headerUpdate1.sh
 Restart=always
 User=root
 Group=root
