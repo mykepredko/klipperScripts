@@ -1,0 +1,14 @@
+[Unit]
+Description=Update the header.cfg file with the CAN0 UUID
+After=network.target
+Requires=moonraker.service
+
+[Service]
+ExecStart=/home/&&&/headerUpdate1.sh
+Restart=always
+User=root
+Group=root
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
