@@ -19,7 +19,8 @@ min_temp: 0
 max_temp: 100
 
 
-[board_pins]
+[board_pins toolhead]
+mcu: toolhead
 aliases:
 # Extruder
     TOOLHEAD_PWM=toolhead:PB13,
@@ -46,15 +47,15 @@ aliases:
     TOOLHEAD_BLGND1=<GND>,
     TOOLHEAD_BL5V=<5V>,
     TOOLHEAD_BLSERVO=toolhead:PB9,
-    TOOLHEAD_BLGND2=<GND>
-    TOOLHEAD_BLPROBE=toolhead:PB8
+    TOOLHEAD_BLGND2=<GND>,
+    TOOLHEAD_BLPROBE=toolhead:PB8,
 
 # TMC2209 Extruder Stepper Motor Driver
     TOOLHEAD_TMCEN=toolhead:PD2,
     TOOLHEAD_TMCSTEP=toolhead:PD0,
     TOOLHEAD_TMCDIR=toolhead:PD1,
     TOOLHEAD_TMCUART=toolhead:PA15,
-    TOOLHEAD_TMCDIAG=toolhead:PB12       # Not required for normal operation
+    TOOLHEAD_TMCDIAG=toolhead:PB12,       # Not required for normal operation
 
 # ADXL345 Accelerometer
     TOOLHEAD_ADXLCS=toolhead:PB12,
@@ -63,15 +64,15 @@ aliases:
     TOOLHEAD_ADXLMOSI=toolhead:PB11,
 
 # NeoPixel LED Connector
-    TOOLHEAD_LEDGND=<GND>                # Pin 1 of 3 Pin Connector
-    TOOLHEAD_LEDSERIAL=toolhead:PD3
-    TOOLHEAD_LED5V=<5V>
+    TOOLHEAD_LEDGND=<GND>,                # Pin 1 of 3 Pin Connector
+    TOOLHEAD_LEDSERIAL=toolhead:PD3,
+    TOOLHEAD_LED5V=<5V>,
 
 # I2C Connector
-    TOOLHEAD_I2C5V=<5V>                  # Pin 1 of 4 Pin Connector
-    TOOLHEAD_I2CGND=<GND>
-    TOOLHEAD_I2CSCL=toolhead:PB3
-    TOOLHEAD_I2CSDA=toolhead:PB4
+    TOOLHEAD_I2C5V=<5V>,                  # Pin 1 of 4 Pin Connector
+    TOOLHEAD_I2CGND=<GND>,
+    TOOLHEAD_I2CSCL=toolhead:PB3,
+    TOOLHEAD_I2CSDA=toolhead:PB4,
 
 # Communications
     TOOLHEAD_CANTX=toolhead:PB1,
