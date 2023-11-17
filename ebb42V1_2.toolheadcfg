@@ -6,7 +6,6 @@
 # unexpected printer behaviour may 
 # result 
 #
-# board=mantaM8PG0B
 # board="EBB42 V1.2"
 # canbus_speed=%%%000
 canbus_uuid: @@@
