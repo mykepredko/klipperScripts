@@ -254,6 +254,7 @@ loadKIAUH
 loadOrUpdateKlipper
 
 
+echoYellow "Load Katapult"
 sudo service klipper stop
 loadKatapult
 
