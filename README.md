@@ -4,4 +4,4 @@ curl -sSL https://raw.githubusercontent.com/mykepredko/klipperScripts/main/write
 
 or 
 
-curl -sSL https://raw.githubusercontent.com/mykepredko/klipperScripts/main/writeToolhead2.sh | bash -s -- mantaM8PG0B1
+curl -sSL https://raw.githubusercontent.com/mykepredko/klipperScripts/main/writeToolhead2.sh | bash -s -- ebb42V1_2
