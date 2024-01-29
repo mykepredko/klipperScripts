@@ -26,7 +26,7 @@ aliases:
     TOOLHEAD_THERMISTOR=PA3,    # 4k7 pull up
     TOOLHEAD_HEATSINKFAN=PA0,   # "FAN1" on PCB/Schematics
 
-    TOOLHEAD_PARTFAN=toolhead:PA1,       # "FAN2" on PCB/Schematics
+    TOOLHEAD_PARTFAN=PA1,       # "FAN2" on PCB/Schematics
 
 # PT100(0) MAX31865 SPI - For more information see:
 # https://github.com/bigtreetech/EBB/blob/master/EBB CAN V1.1 (STM32G0B1)/EBB42 CAN V1.1/Hardware/EBB42 CAN V1.1&V1.2-PIN.png
