@@ -2,7 +2,9 @@
 HOSTNAME: rPi Zero 2W
 STATUS: Released
 MATCHNAME: Raspberry Pi Zero 2 W
-CONNECTIONS: USB SERIAL
+CONNECTIONS:
+USB
+SERIAL
 BLOCKDIAGRAM:
  +-------------------------------------------+
  |O x x x x x x x x x x x x x x x x x x x x O|
