@@ -10,10 +10,11 @@ BLOCKDIAGRAM:
 |O x x x x x x x x x x x x x x x x x x x x O|
 |  x x x x x x x x x x x x x x x x x x x x  |
 |       40 Pin Raspberry Pi Connector       |
-+----+                                      |
-|    | Micro SD                             |
-|    | Card Slot                            |
-+----+                                      |
++------+                                    |
+|      | Micro                              |
+|      | SD Card                            |
+|      | Slot                               |
++------+                                    |
 |   Mini HDMI       USB - COM    USB - Pwr  |
 |    +----+              +---+  +---+       |
 |O   |    |              |   |  |   |      O|
@@ -24,10 +25,11 @@ USBCONNECTION:
 |O x x x x x x x x x x x x x x x x x x x x O|
 |  x x x x x x x x x x x x x x x x x x x x  |
 |                                           |
-+----+                                      |
-|    |                                      |
-|    |                                      |
-+----+                                      |
++------+                                    |
+|      |                                    |
+|      |                                    |
+|      |                                    |
++------+                                    |
 |                   USB - COM    USB - Pwr  |
 |    +----+              +---+  +---+       |
 |O   |    |              |   |  |   |      O|
@@ -45,10 +47,11 @@ SERIALCONNECTION:
 |O + + + + + x x x x x x x x x x x x x x x O|
 |  x x x x x x x x x x x x x x x x x x x x  |
 |                                           |
-+----+                                      |
-|    |                                      |
-|    |                                      |
-+----+                                      |
++------+                                    |
+|      |                                    |
+|      |                                    |
+|      |                                    |
++------+                                    |
 |                   USB - COM    USB - Pwr  |
 |    +----+              +---+  +---+       |
 |O   |    |              |   |  |   |      O|
