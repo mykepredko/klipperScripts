@@ -4,7 +4,7 @@ STATUS: Released
 MATCHNAME: Raspberry Pi Zero 2 W
 CONNECTIONS:
 USB
-SERIAL
+Serial
 BLOCKDIAGRAM:
 +-------------------------------------------+
 |O x x x x x x x x x x x x x x x x x x x x O|
