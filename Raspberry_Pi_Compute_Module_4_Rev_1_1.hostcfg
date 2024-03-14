@@ -5,9 +5,9 @@ HOSTNAME: rPi CM4
 STATUS: Released
 MATCHNAME: Raspberry Pi Compute Module 4 Rev 1.1
 CONNECTIONS:
-EMBEDDED USB
+Embedded USB
 USB 
-SERIAL
+Serial
 BLOCKDIAGRAM:
 +-----------------------------+
 |O                           O|
