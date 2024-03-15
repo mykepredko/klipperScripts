@@ -3,7 +3,7 @@
 #  2024 Myke Predko
 HOSTNAME: rPi CM4
 STATUS: Released
-MATCHNAME: Raspberry Pi Compute Module 4 Rev 1.1
+MATCHNAME: Raspberry Pi Compute Module 4
 CONNECTIONS:
 Embedded USB
 USB
