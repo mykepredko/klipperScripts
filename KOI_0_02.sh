@@ -588,7 +588,7 @@ drawConfigFlow() {
   validFlag=0
   invalidPromptString=${EMPTYSTRING:0:invalidResponseStringLength}
   while [ $validFlag -eq 0 ]; do
-    pause 5s #$# Test for curl operation
+    sleep 5s #$# Test for curl operation
     read -p "$invalidPromptString$promptString): " inputChar
     invalidPromptString="$invalidResponseString"
     if [[ "$inputChar" != "" ]]; then
