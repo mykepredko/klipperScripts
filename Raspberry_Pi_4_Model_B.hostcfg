@@ -71,7 +71,7 @@ USBCONNECTION:
 | |     |  |     |  |       | |
 +-+-----+--+-----+--+-------+-+
               |
-              +--> USB to MCU
+              +--> USB to Main
 SERIALCONNECTION:
 +-----------+-----+-----------+
 |O          |     |          O|
