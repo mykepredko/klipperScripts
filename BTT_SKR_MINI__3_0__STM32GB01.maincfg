@@ -102,9 +102,9 @@ SDCARDFIRMARELOADSYSTEMPOWER:
 2. Insert SD Card
 3. Turn on Power to Main Controller
 4. Wait 1 Minute
-DEFAULTPRINTERCFG:
-generic-bigtreetech-skr-mini-e3-v3.0.cfg
 5. Turn off Power to Main Controller
 6. Remove SD Card
 DFUFIRMARELOADUSBPOWER:
 DFUFIRMARELOADSYSTEMPOWER:
+DEFAULTPRINTERCFG:
+generic-bigtreetech-skr-mini-e3-v3.0.cfg
